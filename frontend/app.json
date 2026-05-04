@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Eduflow",
+    "slug": "eduflow-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": ["ios", "android"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.eduflow.mobile"
+    },
+    "android": {
+      "package": "com.eduflow.mobile",
+      "usesCleartextTraffic": true
+    }
+  }
+}
