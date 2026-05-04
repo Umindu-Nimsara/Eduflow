@@ -4,35 +4,44 @@ node_modules/
 
 # Environment variables
 .env
-*/.env
 .env.local
-*/.env.local
+.env.*.local
+backend/.env
+frontend/.env.local
 
-# Build
+# Build outputs
 dist/
 build/
-*/dist/
-*/build/
-
-# Expo
-.expo/
-.expo-shared/
-*/.expo/
-*/.expo-shared/
-
-# System files
-.DS_Store
-Thumbs.db
 *.log
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# Uploads
-uploads/
-*/uploads/
+# OS
+.DS_Store
+Thumbs.db
 
-# Git
-.git/
-*/.git/
+# Expo
+.expo/
+.expo-shared/
+
+# Uploads (if using local storage)
+backend/uploads/
+!backend/uploads/.gitkeep
+
+# Video server (not needed with Cloudinary)
+video-server/
+
+# Documentation (moved to docs/)
+docs/
+
+# Scripts (utility scripts)
+backend/scripts/
+
+# Temporary files
+*.tmp
+*.temp
