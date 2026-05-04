@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables
+.env
+*/.env
+.env.local
+*/.env.local
+
+# Build
+dist/
+build/
+*/dist/
+*/build/
+
+# Expo
+.expo/
+.expo-shared/
+*/.expo/
+*/.expo-shared/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads
+uploads/
+*/uploads/
+
+# Git
+.git/
+*/.git/

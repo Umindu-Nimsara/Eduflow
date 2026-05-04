@@ -1,0 +1,108 @@
+═══════════════════════════════════════════════════════════════
+🎓 EDUFLOW - O/L EXAM PREPARATION PLATFORM
+═══════════════════════════════════════════════════════════════
+
+📦 SETUP INSTRUCTIONS
+═══════════════════════════════════════════════════════════════
+
+🖥️ BACKEND SETUP (Node.js API)
+───────────────────────────────────────────────────────────────
+
+1. Open Terminal/Command Prompt
+
+2. Go to backend folder:
+   cd backend
+
+3. Install dependencies:
+   npm install
+
+4. Create .env file with these variables:
+   
+   NODE_ENV=development
+   PORT=5000
+   MONGODB_URI=mongodb+srv://your_username:password@cluster.mongodb.net/eduflow
+   JWT_ACCESS_SECRET=your_32_character_secret_here
+   JWT_REFRESH_SECRET=your_different_32_character_secret_here
+   JWT_ACCESS_EXPIRE=15m
+   JWT_REFRESH_EXPIRE=7d
+   CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_API_KEY=your_api_key
+   CLOUDINARY_API_SECRET=your_api_secret
+   CLOUDINARY_UPLOAD_PRESET=EDUFLOW
+   USE_LOCAL_STORAGE=false
+   ALLOWED_ORIGINS=*
+   RATE_LIMIT_WINDOW_MS=900000
+   RATE_LIMIT_MAX_REQUESTS=1000
+   LOGIN_RATE_LIMIT_MAX=50
+
+5. Generate JWT secrets:
+   node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
+   (Run twice for two different secrets)
+
+6. Seed database (optional):
+   node scripts/reset-and-seed-complete.js
+
+7. Start server:
+   npm run dev
+
+Backend will run on: http://localhost:5000
+
+───────────────────────────────────────────────────────────────
+
+📱 FRONTEND SETUP (React Native App)
+───────────────────────────────────────────────────────────────
+
+1. Open Terminal/Command Prompt
+
+2. Go to frontend folder:
+   cd frontend
+
+3. Install dependencies:
+   npm install
+
+4. Update API URL:
+   Open: src/constants/api.js
+   Change: export const API_URL = 'http://YOUR_IP:5000/api';
+   
+   To find your IP:
+   Windows: ipconfig
+   Mac/Linux: ifconfig
+
+5. Start Expo:
+   npx expo start
+
+6. Run on phone:
+   - Install "Expo Go" app from Play Store
+   - Scan QR code from terminal
+   - App will open
+
+───────────────────────────────────────────────────────────────
+
+📋 TEST ACCOUNTS (After Seeding)
+───────────────────────────────────────────────────────────────
+
+Admin:   admin@eduflow.lk / password123
+Teacher: nimal@teacher.lk / password123
+Student: kasun@student.lk / password123
+
+───────────────────────────────────────────────────────────────
+
+🔧 REQUIREMENTS
+───────────────────────────────────────────────────────────────
+
+✅ Node.js (v14 or higher)
+✅ MongoDB Atlas account (free)
+✅ Cloudinary account (free)
+✅ Expo Go app (for mobile testing)
+
+───────────────────────────────────────────────────────────────
+
+📞 SUPPORT
+───────────────────────────────────────────────────────────────
+
+Email: umindunimsara394@gmail.com
+GitHub: https://github.com/Umindu-Nimsara
+
+───────────────────────────────────────────────────────────────
+
+Made with ❤️ for Sri Lankan O/L students
